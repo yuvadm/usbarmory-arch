@@ -1,0 +1,24 @@
+# Maintainer: Yuval Adam <yuval at y3xz dot com> PGP-Key: 271386AA2EB7672F
+
+pkgname=usbarmory-led-brightness
+pkgver=1.0
+pkgrel=1
+pkgdesc="Replace default LED brightness with a more saner choice"
+arch=('any')
+url="https://github.com/yuvadm/usbarmory-arch"
+license=(unknown)
+source=(
+  'blacklist.conf'
+  'tmpfiles.conf' 
+) 
+sha1sums=(
+  '7c6c14dc9e7fc65b233a0f6e13d3a68d6c971b05'
+  'e5a24d8c3fc5acf3364ba47458a4f6131b240fb4'
+)
+
+package() {
+  install -Dm644 ${srcdir}/blacklist.conf ${pkgdir}/etc/modprobe.d/led.conf
+  install -Dm644 ${srcdir}/tmpfiles.conf ${pkgdir}/etc/tmpfiles.d/led.conf
+}
+
+# vim:set ts=2 sw=2 et:
