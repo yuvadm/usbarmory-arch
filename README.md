@@ -15,5 +15,10 @@ $ cd package-name
 $ makepkg -i
 ```
 
-Details also available on https://wiki.archlinux.org/index.php/User:Yuvadm/USB_Armory
+## References
+
+ - https://wiki.archlinux.org/index.php/User:Yuvadm/USB_Armory
+ - https://wiki.archassault.org/USB_Armory
+ - https://github.com/inversepath/usbarmory/wiki
+ - https://github.com/ckuethe/usbarmory
 
